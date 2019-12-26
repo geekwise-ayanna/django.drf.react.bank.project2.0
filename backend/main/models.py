@@ -2,26 +2,26 @@ from django.db import models
 
 # Create your models here.
 class Account(models.Model):
-      type_options = (
+    type_options = (
       ('checking', 'CHECKING'),
       ('savings', 'SAVINGS'),
       ('credit', 'CREDIT'),
   )
-
-  account_name = models.CharField(max_length=40)
-
-  account_no = models.CharField(max_length=10)
-
-  account_type = models.CharField(
-      max_length=10,
-      choices=type_options,
-      default=type_options[0],
-  )
-
-  account_balance = models.CharField(max_length=12)
-
-  def __str__(self):
-    return(f"{self.pk} | Account Name: {self.account_name} | Account No: {self.account_no} | Account Type: {self.account_type}")
+  
+    account_name = models.CharField(max_length=40)
+    
+    account_no = models.CharField(max_length=10)
+    
+    account_type = models.CharField(
+        max_length=10,
+        choices=type_options,
+        default=type_options[0],
+    )
+    
+    account_balance = models.CharField(max_length=12)
+    
+    def __str__(self):
+        return(f"{self.pk} | Account Name: {self.account_name} | Account No: {self.account_no} | Account Type: {self.account_type}")
 
 
 class Product(models.Model):
