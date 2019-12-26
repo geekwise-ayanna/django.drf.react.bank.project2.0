@@ -1,0 +1,8 @@
+.env
+.venv
+env/
+venv/
+.theia
+.theia/
+.vscode
+.vscode/
