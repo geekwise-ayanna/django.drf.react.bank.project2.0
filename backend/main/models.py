@@ -53,7 +53,7 @@ class Customer(models.Model):
     def __str__(self):
         return(f" Customer Full Name: {self.customer_lname}, {self.customer_fname}")
 
-class Branch(models.Model):
+class Branche(models.Model):
     branch_name=models.CharField(max_length=15)
     branch_location=models.CharField(max_length=10)
 
