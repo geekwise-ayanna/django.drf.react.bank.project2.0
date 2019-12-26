@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Bank.models import Account, Branch, Customer, Product
+from main.models import Account, Branch, Customer, Product
 
 # Register your models here.
 admin.site.register(Account)
