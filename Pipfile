@@ -9,6 +9,8 @@ autopep8 = "*"
 
 [packages]
 django = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.8"
