@@ -22,7 +22,7 @@ class Customer_Serializer(serializers.HyperlinkedModelSerializer):
         ]
 
 
-class Account_Serializers(serializers.HyperlinkedModelSerializer):
+class Account_Serializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Account
         fields = [
