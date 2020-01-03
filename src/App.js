@@ -8,9 +8,8 @@ class App extends Component {
     this.state = {
       viewCompleted: false,
       activeItem: {
-        title: "",
-        description: "",
-        completed: false
+        branch_name: "",
+        branch_location: "",
       },
       todoList: []
     };
@@ -20,8 +19,8 @@ class App extends Component {
   }
   refreshList = () => {
     axios
-      .get("http://localhost:8000/api/todos/")
-      .then(res => this.setState({ todoList: res.data }))
+      .get("https://staging-backend-banking-app.herokuapp.com/branch/")
+      .then(res => this.setState({ todoList: res.data.results }))
       .catch(err => console.log(err));
   };
   displayCompleted = status => {
@@ -37,22 +36,23 @@ class App extends Component {
           onClick={() => this.displayCompleted(true)}
           className={this.state.viewCompleted ? "active" : ""}
         >
-          complete
+          Branch
             </span>
-        <span
+        {/* <span
           onClick={() => this.displayCompleted(false)}
           className={this.state.viewCompleted ? "" : "active"}
         >
           Incomplete
-            </span>
+            </span> */}
       </div>
     );
   };
   renderItems = () => {
-    const { viewCompleted } = this.state;
-    const newItems = this.state.todoList.filter(
-      item => item.completed === viewCompleted
-    );
+    // const { viewCompleted } = this.state;
+    // const newItems = this.state.todoList.filter(
+    //   item => item.completed === viewCompleted
+    // );
+    const newItems = this.state.todoList
     return newItems.map(item => (
       <li
         key={item.id}
@@ -60,11 +60,11 @@ class App extends Component {
       >
         <span
           className={`todo-title mr-2 ${
-            this.state.viewCompleted ? "completed-todo" : ""
+            this.state.viewCompleted ? "" : ""
             }`}
-          title={item.description}
+          title={item.branch_name}
         >
-          {item.title}
+          {item.branch_name}<br/>{item.branch_location}
         </span>
         <span>
           <button
@@ -91,21 +91,21 @@ class App extends Component {
     this.toggle();
     if (item.id) {
       axios
-        .put(`http://localhost:8000/api/todos/${item.id}/`, item)
+        .put(`https://staging-backend-banking-app.herokuapp.com/branch/${item.id}/`, item)
         .then(res => this.refreshList());
       return;
     }
     axios
-      .post("http://localhost:8000/api/todos/", item)
+      .post("https://staging-backend-banking-app.herokuapp.com/branch/", item)
       .then(res => this.refreshList());
   };
   handleDelete = item => {
     axios
-      .delete(`http://localhost:8000/api/todos/${item.id}`)
+      .delete(`https://staging-backend-banking-app.herokuapp.com/branch/${item.id}`)
       .then(res => this.refreshList());
   };
   createItem = () => {
-    const item = { title: "", description: "", completed: false };
+    const item = { branch_name: "", branch_location: "" };
     this.setState({ activeItem: item, modal: !this.state.modal });
   };
   editItem = item => {
@@ -114,13 +114,13 @@ class App extends Component {
   render() {
     return (
       <main className="content">
-        <h1 className="text-white text-uppercase text-center my-4">Todo app</h1>
+        <h1 className="text-white text-uppercase text-center my-4">Geekwise Bank</h1>
         <div className="row ">
           <div className="col-md-6 col-sm-10 mx-auto p-0">
             <div className="card p-3">
               <div className="">
                 <button onClick={this.createItem} className="btn btn-primary">
-                  Add task
+                  Add
                     </button>
               </div>
               {this.renderTabList()}
