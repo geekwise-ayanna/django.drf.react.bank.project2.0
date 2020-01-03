@@ -47,8 +47,8 @@ class Product(models.Model):
     return(f"{self.pk} | Loan Type: {self.loan_type} | Loan Balance: {self.loan_balance}")
 
 class Customer(models.Model):
-    customer_first_name=models.CharField(max_length=20)
-    customer_last_name=models.CharField(max_length=20)
+    customer_fname=models.CharField(max_length=20)
+    customer_lname=models.CharField(max_length=20)
 
     def __str__(self):
         return(f" Customer Full Name: {self.customer_lname}, {self.customer_fname}")
