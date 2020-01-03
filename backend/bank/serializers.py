@@ -7,8 +7,8 @@ class Branch_Serializer(serializers.HyperlinkedModelSerializer):
         model = Branch
         fields = [
             'id',
-            'location_name',
-            'location'
+            'branch_name',
+            'branch_location',
         ]
 
 
