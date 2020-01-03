@@ -20,7 +20,7 @@ class App extends Component {
   refreshList = () => {
     axios
       .get("https://staging-backend-banking-app.herokuapp.com/branch/")
-      .then(res => this.setState({ todoList: res.data.results }))
+      .then(res => this.setState({ todoList: res.data }))
       .catch(err => console.log(err));
   };
   displayCompleted = status => {
