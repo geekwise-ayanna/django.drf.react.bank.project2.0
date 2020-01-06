@@ -8,17 +8,17 @@ class Account(models.Model):
       ('credit', 'CREDIT'),
   )
   
-    account_name = models.CharField(max_length=40)
+    account_name = models.CharField(max_length=256)
     
-    account_no = models.CharField(max_length=10)
+    account_no = models.CharField(max_length=256)
     
     account_type = models.CharField(
-        max_length=10,
+        max_length=256,
         choices=type_options,
         default=type_options[0],
     )
     
-    account_balance = models.CharField(max_length=12)
+    account_balance = models.CharField(max_length=256)
     
     def __str__(self):
         return(f"{self.pk} | Account Name: {self.account_name} | Account No: {self.account_no} | Account Type: {self.account_type}")
@@ -32,30 +32,35 @@ class Product(models.Model):
   )
 
   loan_type = models.CharField(
-      max_length=10,
+      max_length=256,
       choices=loan_options,
       default=loan_options[0],
   )
 
-  loan_balance = models.CharField(max_length=12)
+  loan_balance = models.CharField(max_length=256)
 
-  amount_due = models.CharField(max_length=10)
+  amount_due = models.CharField(max_length=256)
 
-  date_due = models.CharField(max_length=10)
+  date_due = models.CharField(max_length=256)
 
   def __str__(self):
     return(f"{self.pk} | Loan Type: {self.loan_type} | Loan Balance: {self.loan_balance}")
 
 class Customer(models.Model):
+<<<<<<< HEAD
     customer_fname=models.CharField(max_length=20)
     customer_lname=models.CharField(max_length=20)
+=======
+    customer_fname=models.CharField(max_length=256)
+    customer_lname=models.CharField(max_length=256)
+>>>>>>> 134a26d5dd7343b10031006ce7c0735a726d7288
 
     def __str__(self):
         return(f" Customer Full Name: {self.customer_lname}, {self.customer_fname}")
 
 class Branch(models.Model):
-    branch_name=models.CharField(max_length=15)
-    branch_location=models.CharField(max_length=10)
+    branch_name=models.CharField(max_length=256)
+    branch_location=models.CharField(max_length=256)
 
     def __str__(self):
         return(f" Branch Name: {self.branch_name} | Branch Location: {self.branch_location}")
