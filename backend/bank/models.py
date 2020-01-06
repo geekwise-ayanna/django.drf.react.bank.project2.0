@@ -49,6 +49,7 @@ class Product(models.Model):
 class Customer(models.Model):
     customer_fname=models.CharField(max_length=256)
     customer_lname=models.CharField(max_length=256)
+    customer_email=models.CharField(max_length=256)
 
     def __str__(self):
         return(f" Customer Full Name: {self.customer_lname}, {self.customer_fname}")

@@ -19,6 +19,7 @@ class Customer_Serializer(serializers.HyperlinkedModelSerializer):
             'id',
             'customer_fname',
             'customer_lname',
+            'customer_email',
         ]
 
 
