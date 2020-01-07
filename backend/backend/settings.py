@@ -41,10 +41,6 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'bank',
-    # Core authentication framework and its default models.
-    'django.contrib.auth',
-    # Django content type system (allows permissions to be associated with models).
-    'django.contrib.contenttypes',
 ]
 
 MIDDLEWARE = [
@@ -56,10 +52,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # Manages sessions across requests
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    # Associates users with requests using sessions.
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
