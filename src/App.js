@@ -19,7 +19,7 @@ class App extends Component {
   }
   refreshList = () => {
     axios
-      .get("https://staging-backend-banking-app.herokuapp.com/branch/")
+      .get("/branch/")
       .then(res => this.setState({ todoList: res.data }))
       .catch(err => console.log(err));
   };
@@ -91,17 +91,17 @@ class App extends Component {
     this.toggle();
     if (item.id) {
       axios
-        .put(`https://staging-backend-banking-app.herokuapp.com/branch/${item.id}/`, item)
+        .put(`/branch/${item.id}/`, item)
         .then(res => this.refreshList());
       return;
     }
     axios
-      .post("https://staging-backend-banking-app.herokuapp.com/branch/", item)
+      .post("/branch/", item)
       .then(res => this.refreshList());
   };
   handleDelete = item => {
     axios
-      .delete(`https://staging-backend-banking-app.herokuapp.com/branch/${item.id}`)
+      .delete(`/branch/${item.id}`)
       .then(res => this.refreshList());
   };
   createItem = () => {
