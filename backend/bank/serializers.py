@@ -7,8 +7,8 @@ class Branch_Serializer(serializers.HyperlinkedModelSerializer):
         model = Branch
         fields = [
             'id',
-            'location_name',
-            'location'
+            'branch_name',
+            'branch_location',
         ]
 
 
@@ -17,8 +17,9 @@ class Customer_Serializer(serializers.HyperlinkedModelSerializer):
         model = Customer
         fields = [
             'id',
-            'customer_fname',
-            'customer_lname',
+            'customer_first_name',
+            'customer_last_name',
+            'customer_email',
         ]
 
 
