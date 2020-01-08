@@ -41,6 +41,7 @@ export default class CustomModal extends Component {
                                 value={this.state.activeItem.branch_name}
                                 onChange={this.handleChange}
                                 placeholder="Enter Branch Name"
+                                maxLength="200"
                             />
                         </FormGroup>
                         <FormGroup>
@@ -51,6 +52,7 @@ export default class CustomModal extends Component {
                                 value={this.state.activeItem.branch_location}
                                 onChange={this.handleChange}
                                 placeholder="Enter Branch Location"
+                                maxLength="200"
                             />
                         </FormGroup>
                     </Form>
