@@ -19,7 +19,7 @@ class App extends Component {
   }
   refreshList = () => {
     axios
-      .get("/branch/")
+      .get("https://ayanna-backend-staging.herokuapp.com/api/branch/")
       .then(res => this.setState({ todoList: res.data }))
       .catch(err => console.log(err));
   };
@@ -91,17 +91,17 @@ class App extends Component {
     this.toggle();
     if (item.id) {
       axios
-        .put(`/branch/${item.id}/`, item)
+        .put(`https://ayanna-backend-staging.herokuapp.com/api/branch/${item.id}/`, item)
         .then(res => this.refreshList());
       return;
     }
     axios
-      .post("/branch/", item)
+      .post("https://ayanna-backend-staging.herokuapp.com/api/branch/", item)
       .then(res => this.refreshList());
   };
   handleDelete = item => {
     axios
-      .delete(`/branch/${item.id}`)
+      .delete(`https://ayanna-backend-staging.herokuapp.com/api/branch/${item.id}`)
       .then(res => this.refreshList());
   };
   createItem = () => {
