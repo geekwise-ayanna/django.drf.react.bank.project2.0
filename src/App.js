@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Modal from "./components/Modal";
 import axios from "axios";
-import Login from "./components/Login";
+import Login from "./components/LoginComponent";
+import SignUp from "./components/SignupComponent";
 
 class App extends Component {
   constructor(props) {
@@ -114,8 +115,12 @@ class App extends Component {
   };
   render() {
     return (
+      <div>
       <Login>
       </Login>
+      <SignUp>
+      </SignUp>
+      </div>
       // <main className="content">
       //   <h1 className="text-white text-uppercase text-center my-4">Geekwise Bank</h1>
       //   <div className="row ">
