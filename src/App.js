@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import Modal from "./components/Modal";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import Modal from "./components/Modal";
 import axios from "axios";
-import Login from "./components/LoginComponent";
+import Login from "./components/Login";
 import SignUp from "./components/SignupComponent";
 
 class App extends Component {
