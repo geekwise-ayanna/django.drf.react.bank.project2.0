@@ -47,11 +47,11 @@ class Product(models.Model):
     return(f"{self.pk} | Loan Type: {self.loan_type} | Loan Balance: {self.loan_balance}")
 
 class Customer(models.Model):
-    customer_first_name = models.CharField(max_length=200, default='Please enter customer first name')
+    customer_first_name = models.CharField(max_length=200, default='Please enter member first name')
 
-    customer_last_name = models.CharField(max_length=200, default='Please enter customer last name')
+    customer_last_name = models.CharField(max_length=200, default='Please enter member last name')
 
-    customer_email = models.EmailField(max_length=250, default='Please enter customer email')
+    customer_email = models.EmailField(max_length=250, default='Please enter member email')
 
     def __str__(self):
         return(f"{self.pk} | Customer Full Name: {self.customer_last_name}, {self.customer_first_name}")
