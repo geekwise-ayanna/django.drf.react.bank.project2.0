@@ -37,7 +37,7 @@ class Customer extends Component {
                     onClick={() => this.displayCompleted(true)}
                     className={this.state.viewCompleted ? "active" : ""}
                 >
-                    Customer
+                    Members
             </span>
             </div>
         );
