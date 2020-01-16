@@ -44,7 +44,7 @@ export default class CustomerModal extends Component {
                                 name="customer_first_name"
                                 value={this.state.customerItem.customer_first_name}
                                 onChange={this.handleChange}
-                                placeholder="Enter Customer First Name"
+                                placeholder="Enter Member First Name"
                             />
                         </FormGroup>
                         <FormGroup>
@@ -54,7 +54,7 @@ export default class CustomerModal extends Component {
                                 name="customer_last_name"
                                 value={this.state.customerItem.customer_last_name}
                                 onChange={this.handleChange}
-                                placeholder="Enter Customer Last Name"
+                                placeholder="Enter Member Last Name"
                             />
                         </FormGroup>
                         <FormGroup>
@@ -64,7 +64,7 @@ export default class CustomerModal extends Component {
                                 name="customer_email"
                                 value={this.state.customerItem.customer_email}
                                 onChange={this.handleChange}
-                                placeholder="Enter Customer Email"
+                                placeholder="Enter Member Email"
                             />
                         </FormGroup>
                     </Form>
