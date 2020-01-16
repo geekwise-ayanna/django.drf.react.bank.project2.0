@@ -46,15 +46,15 @@ class Product(models.Model):
   def __str__(self):
     return(f"{self.pk} | Loan Type: {self.loan_type} | Loan Balance: {self.loan_balance}")
 
-class Customer(models.Model):
-    customer_first_name = models.CharField(max_length=200, default='Please enter customer first name')
+class Member(models.Model):
+    member_first_name = models.CharField(max_length=200, default='Please enter Member first name')
 
-    customer_last_name = models.CharField(max_length=200, default='Please enter customer last name')
+    member_last_name = models.CharField(max_length=200, default='Please enter Member last name')
 
-    customer_email = models.EmailField(max_length=250, default='Please enter customer email')
+    member_email = models.EmailField(max_length=250, default='Please enter Member email')
 
     def __str__(self):
-        return(f"{self.pk} | Customer Full Name: {self.customer_last_name}, {self.customer_first_name}")
+        return(f"{self.pk} | Member Full Name: {self.member_last_name}, {self.member_first_name}")
 
 class Branch(models.Model):
     branch_name = models.CharField(max_length=200, default='Please enter branch name')
