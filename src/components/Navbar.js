@@ -14,26 +14,26 @@ toggleCollapse = () => {
 
 render() {
   return (
-    <Router>
+    <div>
       <MDBNavbar color="default-color" dark expand="md">
         <MDBNavbarBrand>
           <strong className="white-text">Geekwise Bank</strong>
         </MDBNavbarBrand>
         <MDBNavbarToggler onClick={this.toggleCollapse} />
         <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            
+
           <MDBNavbarNav right>
             <MDBNavItem active>
                 <MDBNavLink to="#!">Home</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-                <MDBNavLink to="#!">Branches</MDBNavLink>
+                <MDBNavLink to="/branch">Branches</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
                 <MDBNavLink to="#!">Accounts</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-                <MDBNavLink to="#!">Members</MDBNavLink>
+                <MDBNavLink to="/customer">Members</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
                 <MDBDropdown>
@@ -49,7 +49,7 @@ render() {
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>
-    </Router>
+    </div>
     );
   }
 }
