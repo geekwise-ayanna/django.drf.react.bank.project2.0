@@ -22,19 +22,19 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.CreateModel(
-            name='Branch',
+            name='Branche',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('branch_name', models.CharField(max_length=15)),
-                ('branch_location', models.CharField(max_length=10)),
+                ('branche_name', models.CharField(max_length=15)),
+                ('branche_location', models.CharField(max_length=10)),
             ],
         ),
         migrations.CreateModel(
-            name='Member',
+            name='Customer',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('member_fname', models.CharField(max_length=20)),
-                ('member_lname', models.CharField(max_length=20)),
+                ('customer_fname', models.CharField(max_length=20)),
+                ('customer_lname', models.CharField(max_length=20)),
             ],
         ),
         migrations.CreateModel(
