@@ -6,12 +6,12 @@ Bank project using Django and React deployed via Heroku<br>
 
 ## Installation 
 In order to run this app, please install Django and React.<br>
-([Django Installation Instructions](https://www.djangoproject.com/)) use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
+([Django Installation Instructions](https://www.djangoproject.com/)): use the package manager [pip](https://pip.pypa.io/en/stable/) to install.
 
 ```bash
 pip install bank
 ```
-([React Installation Instructions](https://reactjs.org/)) use the package manager [npm](https://www.npmjs.com/get-npm) to install.
+([React Installation Instructions](https://reactjs.org/)): use the package manager [npm](https://www.npmjs.com/get-npm) to install.
 ```bash
 npm install frontend
 ```
@@ -25,7 +25,7 @@ Password: admin
 * [Django](https://www.djangoproject.com/) - Backend framework
 
 ## Deployment
-* [Heroku](https://www.heroku.com/) - Deployment is accomplished via Heroku
+* [Heroku](https://www.heroku.com/) - Deployment is accomplished via the cloud platform Heroku
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
