@@ -1,2 +1,10 @@
-.node_modules
+.env
+.venv
+env/
+venv/
+.theia
+.theia/
+.vscode
+.vscode/
 node_modules/
+.node_modules

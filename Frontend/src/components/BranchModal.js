@@ -11,7 +11,7 @@ import {
     Label
 } from "reactstrap";
 
-export default class CustomModal extends Component {
+export default class BranchModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,7 +30,7 @@ export default class CustomModal extends Component {
         const { toggle, onSave } = this.props;
         return (
             <Modal isOpen={true} toggle={toggle}>
-                <ModalHeader toggle={toggle}> Branch </ModalHeader>
+                <ModalHeader toggle={toggle}> Branch Information </ModalHeader>
                 <ModalBody>
                     <Form>
                         <FormGroup>
@@ -41,6 +41,7 @@ export default class CustomModal extends Component {
                                 value={this.state.activeItem.branch_name}
                                 onChange={this.handleChange}
                                 placeholder="Enter Branch Name"
+                                maxLength="200"
                             />
                         </FormGroup>
                         <FormGroup>
@@ -51,6 +52,7 @@ export default class CustomModal extends Component {
                                 value={this.state.activeItem.branch_location}
                                 onChange={this.handleChange}
                                 placeholder="Enter Branch Location"
+                                maxLength="200"
                             />
                         </FormGroup>
                     </Form>
