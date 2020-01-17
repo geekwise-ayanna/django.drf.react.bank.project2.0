@@ -1,5 +1,5 @@
-# Bank Project
-
+# Bank App
+This mock banking app will apply CRUD functions between the User and Database. You will be able to make edits on branches, accounts, customers, and products that can be directly reflected on the backend database.
 Bank project using Django and React deployed via Heroku<br>
 [Frontend](https://ayanna-frontend-staging.herokuapp.com/)<br>
 [Backend](https://ayanna-backend-staging.herokuapp.com/)
