@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,3 +67,14 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+=======
+# Bank Project
+
+Bank project using Django and React deployed via Heroku<br>
+[Frontend](https://ayanna-frontend-staging.herokuapp.com/)<br>
+[Backend](https://ayanna-backend-staging.herokuapp.com/)
+
+# Superuser
+Username: admin
+Password: admin
+>>>>>>> c45941d947c8f5f06e6c6ded58275292e5137927
