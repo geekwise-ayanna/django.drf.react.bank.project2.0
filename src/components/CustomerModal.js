@@ -15,26 +15,25 @@ export default class CustomerModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            customerItem: this.props.customerItem
+            activeItem: this.props.activeItem
         };
     }
-
     handleChange = e => {
         let { name, value } = e.target;
-        if (e.target.name === "name") {
-            this.setState({ customerItem: e.target.value })
+        if (e.target.name === "checkbox") {
+            this.setState({ activeItem: e.target.value })
             value = e.target.value;
         }
-        const customerItem = { ...this.state.customerItem, [name]: value };
-        this.setState({ customerItem });
+        const activeItem = { ...this.state.activeItem, [name]: value };
+        this.setState({ activeItem });
     };
 
     render() {
         const { toggle, onSave } = this.props;
-        console.log("Customer: " + this.state.customerItem)
+        console.log("Customer: " + this.state.activeItem)
         return (
             <Modal isOpen={true} toggle={toggle}>
-                <ModalHeader toggle={toggle}> Customer </ModalHeader>
+                <ModalHeader toggle={toggle}> Member Information </ModalHeader>
                 <ModalBody>
                     <Form>
                         <FormGroup>
@@ -42,9 +41,10 @@ export default class CustomerModal extends Component {
                             <Input
                                 type="text"
                                 name="customer_first_name"
-                                value={this.state.customerItem.customer_first_name}
+                                value={this.state.activeItem.customer_first_name}
                                 onChange={this.handleChange}
                                 placeholder="Enter Member First Name"
+                                maxLength="200"
                             />
                         </FormGroup>
                         <FormGroup>
@@ -52,9 +52,10 @@ export default class CustomerModal extends Component {
                             <Input
                                 type="text"
                                 name="customer_last_name"
-                                value={this.state.customerItem.customer_last_name}
+                                value={this.state.activeItem.customer_last_name}
                                 onChange={this.handleChange}
                                 placeholder="Enter Member Last Name"
+                                maxLength="200"
                             />
                         </FormGroup>
                         <FormGroup>
@@ -62,15 +63,16 @@ export default class CustomerModal extends Component {
                             <Input
                                 type="text"
                                 name="customer_email"
-                                value={this.state.customerItem.customer_email}
+                                value={this.state.activeItem.customer_email}
                                 onChange={this.handleChange}
                                 placeholder="Enter Member Email"
+                                maxLength="200"
                             />
                         </FormGroup>
                     </Form>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="success" onClick={() => onSave(this.state.branchItem)}>
+                    <Button color="success" onClick={() => onSave(this.state.activeItem)}>
                         Save
           </Button>
                 </ModalFooter>

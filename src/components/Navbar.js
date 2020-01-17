@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
 
 class NavbarPage extends Component {
 state = {
@@ -30,9 +29,9 @@ render() {
                 <MDBNavLink to="/branch">Branches</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-                <MDBNavLink to="#!">Accounts</MDBNavLink>
+                <MDBNavLink to="/account">Accounts</MDBNavLink>
             </MDBNavItem>
-            <MDBNavItem>
+            <MDBNavItem>    
                 <MDBNavLink to="/customer">Members</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
@@ -41,8 +40,8 @@ render() {
                         <div className="d-none d-md-inline">Profile</div>
                     </MDBDropdownToggle>
                     <MDBDropdownMenu className="dropdown-default">
-                        <MDBDropdownItem href="#!">Login</MDBDropdownItem>
-                        <MDBDropdownItem href="#!">Register</MDBDropdownItem>
+                        <MDBDropdownItem href="/sign-in">Login</MDBDropdownItem>
+                        <MDBDropdownItem href="/sign-up">Sign Up</MDBDropdownItem>
                     </MDBDropdownMenu>
                 </MDBDropdown>
             </MDBNavItem>

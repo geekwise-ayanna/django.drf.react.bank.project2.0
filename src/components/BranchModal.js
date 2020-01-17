@@ -11,7 +11,7 @@ import {
     Label
 } from "reactstrap";
 
-export default class BranchSModal extends Component {
+export default class BranchModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,7 +30,7 @@ export default class BranchSModal extends Component {
         const { toggle, onSave } = this.props;
         return (
             <Modal isOpen={true} toggle={toggle}>
-                <ModalHeader toggle={toggle}> Branch </ModalHeader>
+                <ModalHeader toggle={toggle}> Branch Information </ModalHeader>
                 <ModalBody>
                     <Form>
                         <FormGroup>
