@@ -11,7 +11,7 @@ import {
     Label
 } from "reactstrap";
 
-export default class CustomModal extends Component {
+export default class BranchModal extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -30,39 +30,30 @@ export default class CustomModal extends Component {
         const { toggle, onSave } = this.props;
         return (
             <Modal isOpen={true} toggle={toggle}>
-                <ModalHeader toggle={toggle}> Todo Item </ModalHeader>
+                <ModalHeader toggle={toggle}> Branch Information </ModalHeader>
                 <ModalBody>
                     <Form>
                         <FormGroup>
-                            <Label for="title">Title</Label>
+                            <Label for="branch_name">Branch Name</Label>
                             <Input
                                 type="text"
-                                name="title"
-                                value={this.state.activeItem.title}
+                                name="branch_name"
+                                value={this.state.activeItem.branch_name}
                                 onChange={this.handleChange}
-                                placeholder="Enter Todo Title"
+                                placeholder="Enter Branch Name"
+                                maxLength="200"
                             />
                         </FormGroup>
                         <FormGroup>
-                            <Label for="description">Description</Label>
+                            <Label for="branch_location">Branch Location</Label>
                             <Input
                                 type="text"
-                                name="description"
-                                value={this.state.activeItem.description}
+                                name="branch_location"
+                                value={this.state.activeItem.branch_location}
                                 onChange={this.handleChange}
-                                placeholder="Enter Todo description"
+                                placeholder="Enter Branch Location"
+                                maxLength="200"
                             />
-                        </FormGroup>
-                        <FormGroup check>
-                            <Label for="completed">
-                                <Input
-                                    type="checkbox"
-                                    name="completed"
-                                    checked={this.state.activeItem.completed}
-                                    onChange={this.handleChange}
-                                />
-                                Completed
-                  </Label>
                         </FormGroup>
                     </Form>
                 </ModalBody>
