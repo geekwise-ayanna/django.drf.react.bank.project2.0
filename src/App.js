@@ -6,6 +6,7 @@ import Account from "./components/Account";
 import NavbarPage from "./components/Navbar";
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
+import ForgotPassword from './components/ForgotPassword';
  
 class App extends Component{
 
@@ -18,12 +19,9 @@ class App extends Component{
           <Route path="/branch" component={Branch} />
           <Route path="/account" component={Account} />
           <Route path="/customer" component={Customer} />
-          <div className="auth-wrapper">
-            <div className="auth-inner">
+          <Route path="/forgotpassword" component={ForgotPassword}/>
           <Route path="/sign-in" component={Login} />
           <Route path="/sign-up" component={SignUp} />
-            </div>
-          </div>
           {/* <Route path="/product" component={Products} /> */}
         </Router>
       </div>

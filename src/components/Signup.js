@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 
 export default class SignUp extends Component {
     constructor(props) {
@@ -29,6 +30,8 @@ export default class SignUp extends Component {
 
     render() {
         return (
+            <div className="auth-wrapper">
+                <div className="auth-inner">
             <form>
                 <h3>Sign Up</h3>
 
@@ -69,9 +72,11 @@ export default class SignUp extends Component {
 
                 <button type="button" className="btn btn-primary btn-block" onClick={() => this.onSubmit()} >Sign Up</button>
                 <p className="forgot-password text-right">
-                    Already registered? <a href="#">Sign in here.</a>
+                    Already registered? Sign in <Link to="/sign-in">here.</Link>
                 </p>
             </form>
+            </div>
+            </div>
         );
     }
 }
