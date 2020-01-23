@@ -54,7 +54,8 @@ export default class Login extends Component {
                         placeholder="Enter password"
                         name="password"
                         value={this.state.activeItem.password}
-                        onChange={this.handleChange} />
+                        onChange={this.handleChange}
+                        />
                 </div>
 
                 <div className="form-group">
