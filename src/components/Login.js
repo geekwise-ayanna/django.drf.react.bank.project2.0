@@ -30,7 +30,7 @@ export default class Login extends Component {
     render() {
         return (
             <div className="auth-wrapper">
-                <div className="auth-inner">
+            <div className="auth-inner">
             <form>
                 <h3>Sign In</h3>
 

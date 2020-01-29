@@ -7,7 +7,7 @@ import NavbarPage from "./components/Navbar";
 import Login from "./components/Login";
 import SignUp from "./components/Signup";
 import ForgotPassword from './components/ForgotPassword';
- 
+
 class App extends Component{
 
   render() {
@@ -15,14 +15,13 @@ class App extends Component{
       <div className="App">
         <Router>
           <NavbarPage></NavbarPage>
-          {/* <Route exact path="/" component={Home} /> */}
+          {/* <Route exact path="/home" component={Home} /> */}
           <Route path="/branch" component={Branch} />
           <Route path="/account" component={Account} />
           <Route path="/customer" component={Customer} />
           <Route path="/forgotpassword" component={ForgotPassword}/>
           <Route path="/sign-in" component={Login} />
           <Route path="/sign-up" component={SignUp} />
-          {/* <Route path="/product" component={Products} /> */}
         </Router>
       </div>
     )

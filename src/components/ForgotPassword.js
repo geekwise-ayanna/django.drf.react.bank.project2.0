@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Axios from "axios";
+// import Axios from "axios";
 
 export default class ForgotPassword extends Component {
     constructor(props) {
@@ -14,10 +14,10 @@ export default class ForgotPassword extends Component {
 
     onSubmit() {
         console.log(this.state.activeItem)
-        Axios
-            .post("http://localhost:8000/users/api/auth/login", this.state.activeItem)
-            .then(res => console.log(res.data))
-            .catch(err => console.log(err));
+        // Axios
+        //     .post("http://localhost:8000/users/api/auth/login", this.state.activeItem)
+        //     .then(res => console.log(res.data))
+        //     .catch(err => console.log(err));
     }
 
     handleChange = e => {
